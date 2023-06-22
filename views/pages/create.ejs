@@ -1,0 +1,47 @@
+<html>
+
+    <%- include('../partials/head') %> 
+    <%- include('../partials/header') %> 
+    <body>
+        <h1>create a new blog here!!</h1>
+        <script>
+            function submit(e) {
+                e.preventDefault();
+            
+                
+                
+            }
+        </script>
+
+        <form  action="/blogs" method="POST" onclick='submit()'>
+           
+
+                <div class="form-group">
+                    <label for="title">title:
+                        <input id="title" type="text" name="title" required />
+                    </label>
+                </div>
+            
+            
+                <div class="form-group">
+            
+                    <label for="snippet">snippet:
+                        <input id="snippet" type="text" name="snippet" required />
+                    </label>
+                </div>
+
+            <div class="form-group">
+                <label for="body">body:
+                        <textarea type="text" id="body" name="body" required ></textarea>
+                    </label>
+            </div>
+
+            <button class="form-btn form-group" type="submit" onclick="submit()">submit</button>
+        </form>
+    </body>
+    <%- include('../partials/nav') %> 
+    <%-include('../partials/footer') %>
+
+    
+
+</html>
