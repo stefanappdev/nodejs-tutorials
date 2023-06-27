@@ -1,7 +1,6 @@
-const mongoose=require('mongoose');
-const Schema=mongoose.Schema;
+const  mongoose  = require("mongoose");
 
-const blogSchema=new Schema({
+const BlogSchema=mongoose.Schema({
     title:{
         type:String,
         required:true
@@ -15,9 +14,11 @@ const blogSchema=new Schema({
     body:{
         type:String,
         required:true
-        
     }
 })
 
-const Blog=mongoose.model('Blog',blogSchema)
+const Blog=mongoose.model("Blog",BlogSchema);
+
+
+
 module.exports=Blog;

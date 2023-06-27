@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%=title%></title>
+</head>
+<body>
+  <% const name='mario' %> 
+  <p>Hello <%=name%></p>
+
+  <h1>Blogs</h1>
+  <h2>Your path to becoming a Node.js ninja!</h2>
+  <a href="./about">About</a>
+  <a href="./">Home</a>
+  <a href="./blogs/create">create a blog</a>
+
+<div class="create-blog-content">
+    <form>
+        <label for="title">Blog Title:
+        <input type="text" id="title" required>
+        </label>
+
+        <label for="snippet">Blog Snippet:
+        <input type="text" id="snippet" required>
+        </label>
+
+        <label for="body">Blog Body:
+        <textarea type="text" id="body" required> </textarea>
+        </label>
+       
+        <button>Create Blog</button>
+    </form>
+
+
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%-include('../partials/header.ejs')%>
+
+
+<h1>Blogs page</h1>
+    
+<div class="Blog-content">
+ 
+    <%if (Blogs.length>0){ %> 
+        <% Blogs.map(Blog => { %>
+            <div class="single-blog" >
+                <a href="/blogs/<%-Blog._id%>">
+                    <h3><%-Blog.title%></h3>
+                     <p><%-Blog.snippet%></p> 
+                </a>
+            </div>
+
+            <div>
+                
+            </div>
+        <% })%>
+
+        <% }else{ %>
+            
+            <div>No Blogs yet</div>
+        
+        <% }%>
+          
+
+</div>
+
+<div>
+    <%-include('../partials/blognav.ejs')%>
+</div>
+ 
+<%-include("../partials/footer.ejs")%> 
+
+</html>

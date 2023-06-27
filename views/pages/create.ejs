@@ -1,47 +1,41 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<%- include ('../partials/header.ejs') %> 
 
-    <%- include('../partials/head') %> 
-    <%- include('../partials/header') %> 
-    <body>
-        <h1>create a new blog here!!</h1>
-        <script>
-            function submit(e) {
-                e.preventDefault();
-            
-                
-                
-            }
-        </script>
+<h1>Create a new blog here!</h1>
 
-        <form  action="/blogs" method="POST" onclick='submit()'>
-           
 
-                <div class="form-group">
-                    <label for="title">title:
-                        <input id="title" type="text" name="title" required />
-                    </label>
-                </div>
-            
-            
-                <div class="form-group">
-            
-                    <label for="snippet">snippet:
-                        <input id="snippet" type="text" name="snippet" required />
-                    </label>
-                </div>
+<script>
 
-            <div class="form-group">
-                <label for="body">body:
-                        <textarea type="text" id="body" name="body" required ></textarea>
-                    </label>
-            </div>
+    function formsubmit(event){
+            event.preventDefault();
+    }
 
-            <button class="form-btn form-group" type="submit" onclick="submit()">submit</button>
-        </form>
-    </body>
-    <%- include('../partials/nav') %> 
-    <%-include('../partials/footer') %>
+
+</script>
+
+<form class="blog-form" action="/blogs" method="POST">
+   
+   
+    <label for="title">Title:
+    <input type="text"  id="title" class="form-group" name="title" required/>
+    </label>
+
+
+    <label for="snippet">snippet:
+        <input type="text"  id="snippet" class="form-group" name="snippet" required/>
+        </label>
+
+    <label>Body:
+    <textarea type="text" class="form-group"  id="body" name="body" required> </textarea>
+    </label>
 
     
+    <button class="form-button form-group" type="submit" onclick="formsubmit()">submit</button>
 
+
+</form>
+
+<%- include ('../partials/nav.ejs') %> 
+<%- include ('../partials/footer.ejs') %> 
 </html>
